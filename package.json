@@ -1,0 +1,40 @@
+{
+  "name": "slush-typescript-web",
+  "version": "0.1.0",
+  "description": "Typescript, µReact, Stylus, and Webpack stack.",
+  "main": "slushfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "postinstall": "tsc"
+  },
+  "author": "Joshua Cole",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-conflict": "^0.4.0",
+    "gulp-debug": "^3.2.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-template": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "inquirer": "^4.0.0",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
+  },
+  "keywords": [
+    "slushgenerator"
+  ],
+  "preferGlobal": "true",
+  "devDependencies": {
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-debug": "^2.0.31",
+    "@types/gulp-filter": "^3.0.31",
+    "@types/gulp-util": "^3.0.34",
+    "@types/inquirer": "0.0.36",
+    "@types/node": "^4.0.35",
+    "@types/through2": "^2.0.33",
+    "@types/vinyl": "^2.0.2",
+    "typescript": "^2.6.2"
+  }
+}

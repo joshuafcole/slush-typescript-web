@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    "module": "commonjs",
+    "target": "es5"
+  },
+  "include": ["types.d.ts", "./src/**/*.ts"]
+}
