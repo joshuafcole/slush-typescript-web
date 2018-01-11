@@ -1,9 +1,18 @@
-import {Renderer, uElement} from "./framework/microReact";
-import {Keys, Dispatcher, events, raise, trigger, stop} from "./framework/dispatcher";
+import {debug} from "efreet/debug";
+import {Renderer, uElement} from "efreet/microReact";
+import {Keys, Dispatcher, events, raise, trigger, stop} from "efreet/dispatcher";
 
-function $shell():uElement {
+let msg = "<%= name %>";
+
+events.on("hello click", "hello/click", function() {
+  console.log("Hey there!");
+  msg = "and Goodbye!";
+  redraw();
+});
+
+function $shell() {
   return {c: "shell", children: [
-    {text: "Hello, <%= name %>!"}
+    {text: `Hello, ${msg}!`}
   ]};
 }
 
@@ -12,7 +21,6 @@ function $shell():uElement {
 //-----------------------------------------------------
 
 const renderer = new Renderer();
-(window as any)["renderer"] = renderer; // @DEBUG
 
 window.addEventListener("load", function() {
   document.body.appendChild(renderer.content);
@@ -20,13 +28,13 @@ window.addEventListener("load", function() {
 })
 
 function redraw() {
-  let renderer = (window as any)["renderer"];
   if(renderer && !renderer.queued) {
     renderer.queued = true;
     requestAnimationFrame(force_draw);
   }
 }
-(window as any)["redraw_editor"] = redraw; // @DEBUG
+
+debug.redraw = redraw;
 
 function force_draw() {
   renderer.render([$shell()]);

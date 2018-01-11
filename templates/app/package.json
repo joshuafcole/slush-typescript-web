@@ -10,6 +10,7 @@
   "author": "Joshua Cole",
   "license": "MIT",
   "dependencies": {
+    "efreet": "git@github.com:joshuafcole/efreet.git#master"
   },
   "keywords": [],
   "preferGlobal": "true",
