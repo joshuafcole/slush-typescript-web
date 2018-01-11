@@ -1,6 +1,7 @@
 import * as Hapi from "hapi";
+import * as Joi from "joi";
 
-export const server = new Hapi.Server();
+export let server = new Hapi.Server();
 server.connection({port: 3000, host: "localhost"});
 
 //--------------------------------------------------------------------
@@ -20,7 +21,14 @@ server.route({
   path: "/{name}",
   handler: (request, reply) => {
     let name = decodeURIComponent(request.params.name);
-    reply(`Hello, world! ${name}!`);
+    reply(`Hello, ${name}!`);
+  },
+  config: {
+    validate: {
+      params: {
+        name: Joi.string().min(3).max(12)
+      }
+    }
   }
 });
 

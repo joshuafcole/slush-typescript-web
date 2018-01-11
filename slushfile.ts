@@ -44,6 +44,18 @@ gulp.task("api", function(done) {
   });
 });
 
+gulp.task("js-api", function(done) {
+  let pkg = getPackage();
+  return inquirer.prompt([
+    {type: "input", name: "name", message: "App name: ", default: getNameProposal(), when: !pkg},
+    {type: "input", name: "description", message: "Description: ", default: "N/A", when: !pkg},
+    {type: "input", name: "port", message: "Port: ", default: 3000},
+    {type: "input", name: "host", message: "Host: ", default: "localhost"}
+  ]).then((answers) => {
+    return generateScaffold([templateBlob("base"), templateBlob("js-api")], extend(pkg, answers));
+  });
+});
+
 function getNameProposal() {
   return getPackageAttribute("name") || path.basename(process.cwd());
 }

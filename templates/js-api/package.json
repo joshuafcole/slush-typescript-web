@@ -4,7 +4,7 @@
     "start": "npm run build && node dist/server.js"
   },
   "dependencies": {
-    "hapi": "^16.6.2",
+    "hapi": "^16.0.0",
     "joi": "^13.1.0"
   },
   "devDependencies": {
