@@ -17,7 +17,18 @@ gulp.task("default", function(done) {
     {type: "input", name: "description", message: "Description: ", default: "N/A", when: !pkg}
   ]).then((answers) => {
 
-    return generateScaffold(`${__dirname}/templates/app/**`, extend(pkg, answers));
+    return generateScaffold([templateBlob("base"), templateBlob("app")], extend(pkg, answers));
+  });
+});
+
+gulp.task("js-app", function(done) {
+  let pkg = getPackage();
+  return inquirer.prompt([
+    {type: "input", name: "name", message: "App name: ", default: getNameProposal(), when: !pkg},
+    {type: "input", name: "description", message: "Description: ", default: "N/A", when: !pkg}
+  ]).then((answers) => {
+
+    return generateScaffold([templateBlob("base"), templateBlob("js-app")], extend(pkg, answers));
   });
 });
 
@@ -29,22 +40,16 @@ gulp.task("api", function(done) {
     {type: "input", name: "port", message: "Port: ", default: 3000},
     {type: "input", name: "host", message: "Host: ", default: "localhost"}
   ]).then((answers) => {
-    return generateScaffold(`${__dirname}/templates/api/**`, extend(pkg, answers));
+    return generateScaffold([templateBlob("base"), templateBlob("api")], extend(pkg, answers));
   });
-
-  // gulp.src(__dirname + "/templates/api/**")
-  //   .pipe(conflict("./"))
-  //   .pipe(gulp.dest("./"))
-  //   .on("end", () => {
-  //     childProcess.exec("npm i hapi@16", (err) => {
-  //       if(err) done(err);
-  //       childProcess.exec("npm i --save-dev @types/hapi@16", (err) => done(err));
-  //     });
-  //   });
 });
 
 function getNameProposal() {
   return getPackageAttribute("name") || path.basename(process.cwd());
+}
+
+function templateBlob(name:string) {
+  return `${__dirname}/templates/${name}/**`;
 }
 
 function generateScaffold(globs:string|string[], answers:object = {}) {
