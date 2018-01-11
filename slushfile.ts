@@ -10,7 +10,10 @@ import filter = require("gulp-filter");
 import {getPackage, getPackageAttribute, extend} from "./utils";
 import {mergePackage} from "./merge-package";
 
-gulp.task("default", function(done) {
+gulp.task("default", ["app"]);
+
+
+gulp.task("app", function(done) {
   let pkg = getPackage();
   return inquirer.prompt([
     {type: "input", name: "name", message: "App name: ", default: getNameProposal(), when: !pkg},

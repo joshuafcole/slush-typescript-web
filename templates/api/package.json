@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/server.js"
+    "start": "npm run build && node dist/src/server.js"
   },
   "dependencies": {
     "hapi": "^16.6.2",
