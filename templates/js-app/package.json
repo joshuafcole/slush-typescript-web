@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "webpack-dev-server --hot",
+    "dev": "webpack-dev-server",
     "bundle": "webpack"
   },
   "dependencies": {

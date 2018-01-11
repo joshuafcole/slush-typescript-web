@@ -2,10 +2,12 @@ import {debug} from "efreet/debug";
 import {Renderer, uElement} from "efreet/microReact";
 import {events, raise, trigger, stop} from "efreet/dispatcher";
 
+import "../styles/base.styl";
+
 let msg = "<%= name %>";
 
 events.on("hello click", "hello/click", function() {
-  msg = "and Goodbye!";
+  msg = "and Goodbye";
   redraw();
 });
 
