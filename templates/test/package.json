@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "mocha dist/test"
+  },
+  "dependencies": {
+    "efreet": "git@github.com:joshuafcole/efreet.git#master"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}

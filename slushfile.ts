@@ -16,7 +16,6 @@ gulp.task("default", function(done) {
     {type: "input", name: "name", message: "App name: ", default: getNameProposal(), when: !pkg},
     {type: "input", name: "description", message: "Description: ", default: "N/A", when: !pkg}
   ]).then((answers) => {
-
     return generateScaffold([templateBlob("base"), templateBlob("app")], extend(pkg, answers));
   });
 });
@@ -27,7 +26,6 @@ gulp.task("js-app", function(done) {
     {type: "input", name: "name", message: "App name: ", default: getNameProposal(), when: !pkg},
     {type: "input", name: "description", message: "Description: ", default: "N/A", when: !pkg}
   ]).then((answers) => {
-
     return generateScaffold([templateBlob("base"), templateBlob("js-app")], extend(pkg, answers));
   });
 });
@@ -54,6 +52,11 @@ gulp.task("js-api", function(done) {
   ]).then((answers) => {
     return generateScaffold([templateBlob("base"), templateBlob("js-api")], extend(pkg, answers));
   });
+});
+
+gulp.task("test", function(done) {
+  let pkg = getPackage();
+  return generateScaffold([templateBlob("test")], pkg);
 });
 
 function getNameProposal() {

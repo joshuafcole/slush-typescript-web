@@ -9,5 +9,5 @@
     "module": "commonjs",
     "target": "es5"
   },
-  "include": ["types.d.ts", "./src/**/*.ts"]
+  "include": ["types.d.ts", "./src/**/*.ts", "./test/**/*.ts"]
 }
