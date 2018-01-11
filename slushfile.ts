@@ -59,6 +59,11 @@ gulp.task("test", function(done) {
   return generateScaffold([templateBlob("test")], pkg);
 });
 
+gulp.task("js-test", function(done) {
+  let pkg = getPackage();
+  return generateScaffold([templateBlob("js-test")], pkg);
+});
+
 function getNameProposal() {
   return getPackageAttribute("name") || path.basename(process.cwd());
 }
