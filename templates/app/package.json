@@ -1,21 +1,12 @@
 {
-  "name": "<%= name %>",
-  "version": "0.0.0",
-  "description": "<%= description %>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --hot",
     "bundle": "webpack"
   },
-  "author": "Joshua Cole",
-  "license": "MIT",
   "dependencies": {
     "efreet": "git@github.com:joshuafcole/efreet.git#master"
   },
-  "keywords": [],
-  "preferGlobal": "true",
   "devDependencies": {
-    "@types/node": "^4.0.35",
     "awesome-typescript-loader": "^3.4.1",
     "css-loader": "^0.28.7",
     "source-map-loader": "^0.2.3",

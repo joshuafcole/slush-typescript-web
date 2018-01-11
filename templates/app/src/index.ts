@@ -1,18 +1,17 @@
 import {debug} from "efreet/debug";
 import {Renderer, uElement} from "efreet/microReact";
-import {Keys, Dispatcher, events, raise, trigger, stop} from "efreet/dispatcher";
+import {events, raise, trigger, stop} from "efreet/dispatcher";
 
 let msg = "<%= name %>";
 
 events.on("hello click", "hello/click", function() {
-  console.log("Hey there!");
   msg = "and Goodbye!";
   redraw();
 });
 
 function $shell() {
   return {c: "shell", children: [
-    {text: `Hello, ${msg}!`}
+    {text: `Hello, ${msg}!`, click: raise("hello/click")}
   ]};
 }
 

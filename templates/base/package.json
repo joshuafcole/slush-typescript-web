@@ -1,0 +1,18 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Cole",
+  "license": "MIT",
+  "dependencies": {
+    "efreet": "git@github.com:joshuafcole/efreet.git#master"
+  },
+  "keywords": [],
+  "preferGlobal": "true",
+  "devDependencies": {
+    "typescript": "^2.6.2"
+  }
+}
