@@ -4,9 +4,10 @@
     "bundle": "webpack"
   },
   "dependencies": {
-    "efreet": "git@github.com:joshuafcole/efreet.git#master"
+    "efreet": "^0.1.9"
   },
   "devDependencies": {
+    "@types/velocity-animate": "^1.2.32",
     "awesome-typescript-loader": "^3.4.1",
     "css-loader": "^0.28.7",
     "source-map-loader": "^0.2.3",
