@@ -12,5 +12,6 @@
     "@types/joi": "^13.0.4",
     "@types/node": "^4.0.35",
     "typescript": "^2.6.2"
-  }
+  },
+  "capabilities": ["test"]
 }

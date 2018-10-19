@@ -10,5 +10,6 @@
     "chai": "^4.1.2",
     "mocha": "^4.1.0",
     "ts-node": "^4.1.0"
-  }
+  },
+  "capabilities": ["test"]
 }

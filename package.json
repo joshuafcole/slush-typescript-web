@@ -11,31 +11,33 @@
   "author": "Joshua Cole",
   "license": "MIT",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-conflict": "^0.4.0",
     "gulp-debug": "^3.2.0",
     "gulp-filter": "^5.1.0",
     "gulp-install": "^1.1.0",
-    "gulp-template": "^3.0.0",
+    "gulp-template": "^5.0.0",
     "gulp-util": "^3.0.8",
-    "inquirer": "^4.0.0",
-    "package-merge": "git://github.com:joshuafcole/package-merge.git#master",
+    "inquirer": "^6.2.0",
+    "mz": "^2.7.0",
+    "package-merge": "git://github.com/joshuafcole/package-merge.git#master",
     "through2": "^2.0.3",
-    "vinyl": "^2.1.0"
+    "vinyl": "^2.2.0"
   },
   "keywords": [
     "slushgenerator"
   ],
   "preferGlobal": "true",
   "devDependencies": {
-    "@types/gulp": "^3.8.36",
+    "@types/gulp": "^4.0.5",
     "@types/gulp-debug": "^2.0.31",
-    "@types/gulp-filter": "^3.0.31",
+    "@types/gulp-filter": "^3.0.33",
     "@types/gulp-util": "^3.0.34",
-    "@types/inquirer": "0.0.36",
-    "@types/node": "^4.0.35",
-    "@types/through2": "^2.0.33",
+    "@types/inquirer": "0.0.43",
+    "@types/mz": "0.0.32",
+    "@types/node": "^10.12.0",
+    "@types/through2": "^2.0.34",
     "@types/vinyl": "^2.0.2",
-    "typescript": "^2.6.2"
+    "typescript": "^3.1.3"
   }
 }

@@ -36,6 +36,10 @@ declare module "gulp-install" {
 }
 
 declare module "package-merge" {
-  function merge(dest:Buffer, src:Buffer):string;
-  export = merge;
+  export function merge(dest:Buffer, src:Buffer):string;
+  export default merge;
+
+  export type Handler<T> = (a:T|undefined, b:T|undefined) => T|undefined;
+  export function customize(extraHandlers:{[key:string]: Handler<unknown>}): typeof merge;
+  export let builtins:{[name:string]: Handler<any>};
 }

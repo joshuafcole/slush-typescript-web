@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "ts-node ./src/bin/index.ts"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  },
+  "capabilities": ["cli"]
+}

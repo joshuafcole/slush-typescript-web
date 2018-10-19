@@ -6,12 +6,11 @@
   },
   "author": "Joshua Cole",
   "license": "MIT",
-  "dependencies": {
-    "efreet": "git@github.com:joshuafcole/efreet.git#master"
-  },
+  "dependencies": {},
   "keywords": [],
   "preferGlobal": "true",
   "devDependencies": {
-    "typescript": "^2.6.2"
-  }
+    "typescript": "^3.1.3"
+  },
+  "capabilities": ["base"]
 }

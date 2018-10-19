@@ -4,11 +4,13 @@
     "outDir": "./dist",
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
     "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
 
+    "lib": ["es2015", "dom"],
     "module": "commonjs",
     "target": "es5"
   },
-  "include": ["types.d.ts", "./src/**/*.ts", "./test/**/*.ts"]
+  "include": ["./src/typings/**/*.d.ts", "./src/**/*.ts", "./test/**/*.ts"],
 }
