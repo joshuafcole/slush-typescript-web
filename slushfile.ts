@@ -38,7 +38,7 @@ function copy_attributes<T>(x:T):T {
 }
 
 function as_task_descriptors<T>(x:T):Record<keyof T, Partial<TaskDescriptor>> {
-  return x;
+  return x as any;
 }
 
 let tasks = as_task_descriptors({
@@ -55,6 +55,14 @@ let tasks = as_task_descriptors({
       {type: "input", name: "host", message: "Host: ", default: "localhost"}
     ],
   },
+  flapp: {
+    deps: ["base"],
+    prompts: [
+      {type: "input", name: "port", message: "Port: ", default: 8080},
+      {type: "input", name: "host", message: "Host: ", default: "localhost"}
+    ],
+  },
+
   api: {
     deps: ["base"],
     prompts: [

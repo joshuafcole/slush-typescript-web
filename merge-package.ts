@@ -5,7 +5,7 @@ import * as VinylFile from "vinyl";
 import packagemerge = require("package-merge");
 import * as gutil from "gulp-util";
 
-let mergePackageBuffers = packagemerge.customize({capabilities: packagemerge.builtins.unique});
+let mergePackageBuffers = packagemerge.customize({/*capabilities: packagemerge.builtins.unique*/});
 
 function noop() {}
 
